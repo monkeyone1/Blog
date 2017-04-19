@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html,body,#root,.wrap{
+  margin: 0;
+  height: 100%;
+}
+.wrap{
+  display: flex;
+  flex-direction: column
+}
+.main{
+  flex-grow:1;
+  display: flex;
+  overflow-y: auto;
+
+}
+.home-wrap{
+    flex:1; 
+    background: url('./image/homebg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.home-cover{
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+ 
+}

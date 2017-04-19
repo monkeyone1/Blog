@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {hashHistory,Link,history} from 'react-router';
 //mui
 import FontIcon from 'material-ui/FontIcon';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Paper from 'material-ui/Paper';
-import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+
 import Home from 'material-ui/svg-icons/action/home';
 
 
 
-
-const favoritesIcon =<IconLocationOn /> ;
 class Foooter extends Component {
   constructor() {
+     
     super();
+    
     this.state = {
       selectedIndex: 0
     };
@@ -22,41 +22,56 @@ class Foooter extends Component {
   }
   select(index) {
     this.setState({selectedIndex: index});
+     
   }
   render() {
+   let styles={
+     ctr: {textAlign: 'center'}
+   }
     return (
+
       <footer>
-        <Paper zDepth={1}>
+        <Paper zDepth={2} style={{
+          backgroundColor:'#00BCD4',
+          color:'#ffffds'
+          }}>
         <BottomNavigation selectedIndex={this.state.selectedIndex}>
-        <Link to='/'>
+     
        <BottomNavigationItem
+            style={styles.ctr}
             label="Home"
             icon={<Home/>}
+          containerElement={<Link to="/" />}
             onTouchTap={this.select.bind(this,0)}
+            
           />
-           </Link>
-           <Link to='Blog'>
+      
+         
            <BottomNavigationItem
+           style={styles.ctr}
             label="Blog"
             icon={<Home/>}
-            onTouchTap={this.select.bind(this,0)}
+             containerElement={<Link to="blog"/>}
+            onTouchTap={this.select.bind(this,1)}
           />
-          </Link>
-           <Link to='work'>
+        
+           
            <BottomNavigationItem
+           style={styles.ctr}
             label="Work"
             icon={<Home/>}
-            onTouchTap={this.select.bind(this,0)}
+            containerElement={<Link to="work"/>}
+            onTouchTap={this.select.bind(this,2)}
           />
-          </Link>
-             <Link to='about'>
+          
            <BottomNavigationItem
+            style={styles.ctr}
             label="About"
             icon={<Home/>}
-            onTouchTap={this.select.bind(this,0)}
+             containerElement={<Link to="about"/>}
+            onTouchTap={this.select.bind(this,3)}
           />
-          </Link>
-          
+    
           
           </BottomNavigation>
         </Paper>

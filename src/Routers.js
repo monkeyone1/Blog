@@ -16,8 +16,7 @@ class Routers extends Component {
           <IndexRoute component={Home} />  
         <Route path='/blog' component={Blog}/>
         <Route path='/work' component={Work}/>
-        <Route path='/about' component={About}/>
-        
+        <Route path='/about' component={About}/>       
       </Route>
       </Router>
     );
