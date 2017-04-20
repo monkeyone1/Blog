@@ -4,18 +4,17 @@ import {Link} from 'react-router';
 
 class Card extends Component {
   render() {
-
+     console.log(this.props.data)
     return (
-     
         <div>
         {this
           .props
           .data
-          .map((item) => <Paper zDepth={2} style={{margin:'10px'}}
+         .map((item) => <Paper zDepth={2} style={{margin: '0 auto', marginBottom: '10px', maxWidth: '500px'}}
             key={Math.random()} >
             <div> 
-            <Link to='/'>
-             <img src={item.img} alt="img"/>
+            <Link to={`/post/${item.url}`}>
+             <img style={{overflow:'blank', width:'100%'}} src={item.img} alt="img"/>
             </Link>  
             </div>
             <div style={{
