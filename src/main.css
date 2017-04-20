@@ -12,6 +12,33 @@ html,body,#root,.wrap{
   display: flex;
   flex-direction: column
 }
+
+
+@media (min-width: 700px) {
+  .wrap{
+    flex-direction: row;
+  }
+}
+.navbar{
+  width: 260px;
+  background-color: #00bcd4;
+  color: #fff;
+}
+.navbar h1{
+  text-align: center;
+}
+.navbar a{
+  display: block;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar a:hover{
+   background-color: rgba(0, 0, 0, 0.2);
+}
+
 .main{
   flex-grow:1;
   display: flex;

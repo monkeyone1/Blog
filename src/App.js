@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './componet/Header.js';
 import Footer from './componet/Footer.js';
+import NavBar from './componet/NavBar.js';
 import './main.css';
 import  'highlight.js/styles/default.css';
 class App extends React.Component {
@@ -13,24 +14,31 @@ class App extends React.Component {
   }
   componentWillReceiveProps(){
    this.changeTitle();
+   this.checkMobile();
   }
   
   componentWillMount(){
     this.changeTitle();
+    this.checkMobile();
   }
   
   changeTitle(){
     this.setState({pathname:this.props.location.pathname})
   }
+  checkMobile(){
+    this.setState({
+      mobile: document.body.clientWidth<700 ? true : false
+    })
+  }
   render () {
    console.log(this.props.location.pathname);
     return(
       <div className='wrap'>
-        <Header title={this.state.pathname}/>
+       { this.state.mobile?<Header title={this.state.pathname}/>:<NavBar title={this.state.pathname}/>}
       <div className="main">
       {this.props.children}
       </div>
-      < Footer/>
+      {this.state.mobile ?  < Footer/>:null}
       </div>
     )
   }
