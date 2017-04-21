@@ -7,7 +7,9 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Paper from 'material-ui/Paper';
 
 import Home from 'material-ui/svg-icons/action/home';
-
+import Blog from 'material-ui/svg-icons/action/book';
+import Work from 'material-ui/svg-icons/action/description';
+import About from 'material-ui/svg-icons/action/account-circle';
 
 
 class Foooter extends Component {
@@ -50,7 +52,7 @@ class Foooter extends Component {
            <BottomNavigationItem
            style={styles.ctr}
             label="Blog"
-            icon={<Home/>}
+            icon={<Blog/>}
              containerElement={<Link to="blog"/>}
             onTouchTap={this.select.bind(this,1)}
           />
@@ -59,7 +61,7 @@ class Foooter extends Component {
            <BottomNavigationItem
            style={styles.ctr}
             label="Work"
-            icon={<Home/>}
+            icon={<Work/>}
             containerElement={<Link to="work"/>}
             onTouchTap={this.select.bind(this,2)}
           />
@@ -67,7 +69,7 @@ class Foooter extends Component {
            <BottomNavigationItem
             style={styles.ctr}
             label="About"
-            icon={<Home/>}
+            icon={<About/>}
              containerElement={<Link to="about"/>}
             onTouchTap={this.select.bind(this,3)}
           />

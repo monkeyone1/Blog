@@ -15,9 +15,10 @@ class Home extends Component {
             <h1>HI,I AM ZZ:D</h1>
             <p>a front-end development</p>
             <RaisedButton style={{margin:'15px'}}
+            href='https://github.com/monkeyone1'
              label="Contact Me" primary={true} />
           </div>
-
+        
         </div>
       </div>
     );

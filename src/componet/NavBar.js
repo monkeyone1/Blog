@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Link} from 'react-router';
-import ActionHome from 'material-ui/svg-icons/action/home';
+
 
 export default class NavBar extends React.Component{
   render(){
