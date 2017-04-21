@@ -15,20 +15,26 @@ class App extends React.Component {
   componentWillReceiveProps(){
    this.changeTitle();
    this.checkMobile();
+
   }
   
   componentWillMount(){
     this.changeTitle();
     this.checkMobile();
   }
+  componentDidMount() {
+    window.onresize = this.checkMobile.bind(this)
+  }
+  
   
   changeTitle(){
     this.setState({pathname:this.props.location.pathname})
   }
   checkMobile(){
     this.setState({
-      mobile: document.body.clientWidth<700 ? true : false
-    })
+      mobile: document.body.clientWidth<=700?true : false})
+      console.log(this.state.mobile);
+      console.log(document.body.mobile);
   }
   render () {
    console.log(this.props.location.pathname);
@@ -38,7 +44,7 @@ class App extends React.Component {
       <div className="main">
       {this.props.children}
       </div>
-      {this.state.mobile ?  < Footer/>:null}
+      {this.state.mobile?< Footer/>:null}
       </div>
     )
   }

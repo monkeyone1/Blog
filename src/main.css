@@ -12,8 +12,6 @@ html,body,#root,.wrap{
   display: flex;
   flex-direction: column
 }
-
-
 @media (min-width: 700px) {
   .wrap{
     flex-direction: row;
