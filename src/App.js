@@ -33,8 +33,7 @@ class App extends React.Component {
   checkMobile(){
     this.setState({
       mobile: document.body.clientWidth<=700?true : false})
-      console.log(this.state.mobile);
-      console.log(document.body.mobile);
+     
   }
   render () {
    console.log(this.props.location.pathname);

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {hashHistory} from 'react-router';
-
-
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import  Keyleft from '../image/ic_keyboard_arrow_left_black_24dp_2x.png';
