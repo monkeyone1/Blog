@@ -3,12 +3,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import RefreshIndicator from 'material-ui/RefreshIndicator';
 
 class Loading extends Component {
- constructor() {
-   super();
-   this.state={
-     move:document.body.clientWidth/2
-   }
- }
+
  
   
   
@@ -20,10 +15,10 @@ class Loading extends Component {
 
     console.log('hello');
     return (
-      <div style={{display:'inline'}}>
+      <div style={{textAlign:'center'}}>
        <RefreshIndicator
       size={50}
-      left={this.state.move}
+      left={0}
       top={30}
       loadingColor="#FF9800"
       status="loading"

@@ -42,20 +42,7 @@ class About extends Component {
           display: 'flex',
           margin: '20px'
         }}>
-          <Paper
-            style={{
-            height: 200,
-            width: 200,
-            margin: 20,
-            overflow: 'hidden'
-          }}
-            zDepth={1}
-            circle={true}>
-
-            <img src={me} style={{
-              width: 200
-            }} alt=""/>
-          </Paper>
+        
            <div style={{ margin:'40px'}}>
              <h1>张振东</h1>
              <p>一个幽默的前端程序员</p>
@@ -64,12 +51,13 @@ class About extends Component {
            </div>
 
         </Paper>
-     
+
 
       <div id='main' style={{width:'100%',height:'600px',maxWidth:'600px',margin:'0 auto'}}></div>
+
      
-      
-        
+
+
       </div>
     );
   }
