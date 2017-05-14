@@ -53,7 +53,7 @@ class About extends Component {
         </Paper>
 
 
-      <div id='main' style={{width:'100%',height:'600px',maxWidth:'600px',margin:'0 auto'}}></div>
+      <div id='main' style={{width:'100%',height:'40%',maxWidth:'600px',margin:'0 auto'}}></div>
 
      
 

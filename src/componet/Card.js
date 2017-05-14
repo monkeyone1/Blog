@@ -10,11 +10,11 @@ class Card extends Component {
         {this
           .props
           .data
-         .map((item) => <Paper zDepth={2} style={{margin: '0 auto', marginBottom: '10px', maxWidth: '500px'}}
+         .map((item) => <Paper zDepth={2} style={{margin: '0 auto', marginBottom: '20px', maxWidth:'700px'}}
             key={Math.random()} >
             <div> 
             <Link to={`/post/${item.url}`}>
-             <img style={{overflow:'blank', width:'100%'}} src={item.img} alt="img"/>
+             <img style={{overflow:'blank', height:'200px',width:'100%',padding:'10px'}} src={item.img} alt="img"/>
             </Link>  
             </div>
             <div style={{

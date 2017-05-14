@@ -14,7 +14,7 @@ class Blog extends Component {
   }
   componentWillMount() {
     axios
-      .get('https://raw.githubusercontent.com/newming/demodata/master/card.json')
+      .get('https://raw.githubusercontent.com/monkeyone1/datas/master/datas.json')
       .then((res) => {
         this.setState({data: res.data, loading: false});
       })
