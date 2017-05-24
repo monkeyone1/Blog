@@ -4,8 +4,8 @@ import timg from '../image/timg.jpeg';
 class H404 extends Component {
   render() {
     return (
-      <div style={{textAlign:'center',marginTop:'40px'}}>
-        <img src={timg} alt="img"/>
+      <div style={{textAlign:'center',marginTop:'40px', width:'100%'}}>
+        <img style={{Width:'200px'}} src={timg} alt="img"/>
       </div>
     );
   }

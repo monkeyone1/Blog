@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Paper from 'material-ui/Paper';
-import me from '../image/me.jpg';
+
 import marked from 'marked';
 import echarts from 'echarts';
 
