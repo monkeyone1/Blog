@@ -13,7 +13,7 @@ class Post extends Component {
   }
   
  componentWillMount(){
-    axios.get(`https://raw.githubusercontent.com/newming/demodata/master/blog/${this.props.params.title}.md`)
+    axios.get(`https://raw.githubusercontent.com/monkeyone1/datas/master/${this.props.params.title}.md`)
       .then( (res) => this.setState({data: res.data,loading: false}))
       .catch( (err) => alert(err) )
   }
@@ -28,7 +28,7 @@ class Post extends Component {
     return (
       <div  style={{padding: '10px',width: '100%'}}>
         {
-         this.state.loading?<div style={{width:'100%',textAlign:'center', margin:'30px'}}><Loading/></div>:
+         this.state.loading?<div style={{width:'100%',textAlign:'center'}}><Loading/></div>:
          <div className='post-content' dangerouslySetInnerHTML={{__html:marked(this.state.data)}}></div>
         }
       </div>

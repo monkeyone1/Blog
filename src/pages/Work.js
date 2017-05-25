@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Loading from '../componet/Loading.js';
+
 
 class Work extends Component {
   
@@ -7,8 +9,8 @@ class Work extends Component {
  
   render() {
     return (
-      <div>
-        
+      <div style={{width:'100%'}}>
+       <Loading/>
       </div>
     );
   }

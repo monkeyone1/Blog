@@ -34,13 +34,20 @@ module.exports = {
       test: /\.css$/,
       loader: 'style!css!autoprefixer'
     },
+    
     {
       test: /\.(jpe?g|png)$/,
       loader: 'file-loader'
     },
+     {
+    test: /\.scss$/,
+    loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+  },
     {
       test: /\.(woff|woff2|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000"
-    }]
+      loader: 'url?limit=10000'
+    }
+    ]
+     
   }
 };

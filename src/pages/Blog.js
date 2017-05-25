@@ -7,14 +7,14 @@ class Blog extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      loading: true,
       data: []
 
     }
   }
   componentWillMount() {
     axios
-      .get('https://raw.githubusercontent.com/newming/demodata/master/card.json')
+      .get('https://raw.githubusercontent.com/monkeyone1/datas/master/datas.json')
       .then((res) => {
         this.setState({data: res.data, loading: false});
       })
@@ -27,12 +27,7 @@ class Blog extends Component {
         width: '100%'
       }}>
         {this.state.loading
-          ? <div
-              style={{
-              width: '100%',
-              textAlign: 'center',
-              margin: '30px'
-            }}><Loading/></div>
+          ? <Loading/>
           : <Card data={this.state.data}/>}
 
       </div>
