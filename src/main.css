@@ -139,3 +139,7 @@ html,body,#root,.wrap{
   line-height: 2.3;
   text-align: center;
 }
+#cvs{z-index: -1; width: 600px}
+ .container_404 h1 {position:  absolute; color: #f8f8f8; font-size: 16rem;top:90px;left:700px; }
+
+			 

@@ -154,5 +154,16 @@ export default StyleSheet.create({
     'display': 'block',
     'lineHeight': [{ 'unit': 'px', 'value': 2.3 }],
     'textAlign': 'center'
+  },
+  '#cvs': {
+    'zIndex': '-1',
+    'width': [{ 'unit': 'px', 'value': 600 }]
+  },
+  'container_404 h1': {
+    'position': 'absolute',
+    'color': '#f8f8f8',
+    'fontSize': [{ 'unit': 'rem', 'value': 16 }],
+    'top': [{ 'unit': 'px', 'value': 90 }],
+    'left': [{ 'unit': 'px', 'value': 700 }]
   }
 });
