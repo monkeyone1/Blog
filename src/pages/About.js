@@ -3,32 +3,77 @@ import Paper from 'material-ui/Paper';
 
 import marked from 'marked';
 import echarts from 'echarts';
-
+import Avatar from 'material-ui/Avatar';
+import q from '../image/q.jpeg'
 class About extends Component {
 
  componentDidMount(){
     var myChart = echarts.init(document.getElementById('main'));
     myChart.setOption({
-      title: {
-        text: '我的技能展示',
-        textStyle:{
-          color: 'teal'
+
+      backgroundColor: '#00B4CF',
+      title : {
+        text: '我的手艺成熟度',
+        textStyle: {
+         color: 'white'
         },
-        left:'center'
+        x: 'center'
       },
-      tooltip: {},
+      yAxis: {
+        axisLine: {show: false},
+        axisTick: {show: false},
+        data: ['React','CSS','HTML','JS'],
+        axisLabel: {
+          show: true,
+          textStyle: {
+            color: 'white'
+        }
+      },
+      },
       xAxis: {
-          data: ['html','css','js','react','node','mongodb']
+        axisLine: {show: false},
+        axisTick: {show: false},
+        splitLine: { show: false },
+        axisLabel: { show: false }
       },
-      yAxis: {},
-      series: [{
-          name: '熟练度',
+      series: [
+        {
           type: 'bar',
-          data: [90, 95, 85, 80, 70, 60]
-      }]
+          barWidth: 30,
+          data: [100, 100, 100, 100],
+          itemStyle: {
+            normal: {
+              color: 'rgba(0,0,0,0.15)'
+            }
+          }
+        },
+        {
+          type: 'bar',
+          barWidth: 30,
+          data: [70, 80, 76, 70],
+          itemStyle: {
+            normal: {
+              barBorderRadius: 5,
+              color: 'white'
+            }
+          },
+          barGap: '-100%',
+          label: {
+            normal: {
+              show: true,
+              formatter: '{c}%',
+              textStyle: {
+                color: '#2196f3'
+              }
+            }
+          }
+        }
+      ]
+  
     });
   }
   render() {
+
     return (
       <div
         style={{
@@ -44,6 +89,7 @@ class About extends Component {
         }}>
         
            <div style={{ margin:'40px'}}>
+
              <h1>张振东</h1>
              <p>一个幽默的前端程序员</p>
 
@@ -53,7 +99,7 @@ class About extends Component {
         </Paper>
 
 
-      <div id='main' style={{width:'100%',height:'40%',maxWidth:'600px',margin:'0 auto'}}></div>
+      <div id='main' style={{width:'100%',height:'40%',maxWidth:'80%',margin:'0 auto'}}></div>
 
      
 
